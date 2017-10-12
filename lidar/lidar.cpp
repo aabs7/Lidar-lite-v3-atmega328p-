@@ -10,7 +10,7 @@
 #include <avr/io.h>
 #include <util/delay.h>
 #include <avr/interrupt.h>
-#include "LIDAR.h"
+#include "lidar.h"
 
 
 volatile uint32_t Ofcounter = 0;
