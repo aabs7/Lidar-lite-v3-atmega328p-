@@ -1,7 +1,8 @@
 # Lidar-lite-v3-atmega328p-
 This is header file for Lidar-lite-v3 for Atmega328p. For other microcontrollers, changing registers name will work.
 
-WORKING PRINCIPLE USING MODE CONTROL PIN.
+WORKING PRINCIPLE USING MODE CONTROL PIN:
+
 The mode control pin is shorted with rec_bit on microcontroller and mode control pin is connected to trig_bit through 1k resistor.
 When the trig_bit is made low, the LIDAR acknowledges by sending LASER and pulling up the mode control pin and hence the rec_bit.
 
