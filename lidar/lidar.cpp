@@ -49,7 +49,7 @@ TCNT1 = 0;
 	Init_Lidar();
 	Trigger_Lidar();
 	sei();
-	while(!(REC_PIN &(1<<REC_BIT)));//while rec bit is high
+	while(!(REC_PIN &(1<<REC_BIT)));//while rec bit is low
 	
 	/********************************************************/
 	/*	Add if receive bit is high for much long time , it shows error */
@@ -59,7 +59,7 @@ TCNT1 = 0;
 	TIMSK1 |= (1<<TOIE1);
 	TCNT1 = 0;
 	
-	while((REC_PIN &(1<<REC_BIT)));	  //until rec bit is low
+	while((REC_PIN &(1<<REC_BIT)));	  //while rec_bit is high
 	
 	TCCR1B = 0x00;			//stop 16 bit timer with no prescaler
 	
